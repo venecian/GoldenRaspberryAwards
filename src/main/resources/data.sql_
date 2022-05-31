@@ -1,0 +1,2 @@
+insert into movie (ano,title,studio,producers,winner) values(2022,'t','s','p',true)
+insert into movie (ano,title,studio,producers,winner) values(2021,'t1','s1','p1',false)
