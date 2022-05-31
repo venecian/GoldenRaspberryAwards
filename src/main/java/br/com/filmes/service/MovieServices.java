@@ -80,32 +80,34 @@ public class MovieServices {
 			//percorre todos os filmes de um respectivo produtor
 			for (i = 0; i < movies.size(); i++) {
 				if (movies.get(i).getProducers().contains(producer)) {
+
 					if (reg==0) {
 						min = movies.get(i).getYear();
+					} else {
+
+						//cria registro
+						max = movies.get(i).getYear();
+						intevalo = max - min;
+
+						ProducerPrizeDTO producerPrizeDTO = new ProducerPrizeDTO();
+						producerPrizeDTO.setProducer(producer);
+						producerPrizeDTO.setPreviousWin(min);
+						producerPrizeDTO.setFollowingWin(max);
+						producerPrizeDTO.setInterval(intevalo);
+						producersPrizeDTO.add(producerPrizeDTO);
+
+						min = max;
+
+						//obtendo intervalo: minimo e maximo
+						if (intevalo>maxIntervalo) {
+							maxIntervalo = intevalo;
+						}
+
+						if (intevalo<minInvervalo) {
+							minInvervalo = intevalo;
+						}
 					}
-					max = movies.get(i).getYear();
 					reg++;
-				}
-			}
-
-			//caso tenha 2 filmes registrar
-			if (reg==2) {
-				intevalo = max - min;
-
-				ProducerPrizeDTO producerPrizeDTO = new ProducerPrizeDTO();
-				producerPrizeDTO.setProducer(producer);
-				producerPrizeDTO.setPreviousWin(min);
-				producerPrizeDTO.setFollowingWin(max);
-				producerPrizeDTO.setInterval(intevalo);
-				producersPrizeDTO.add(producerPrizeDTO);
-
-				//obtendo intervalo: minimo e maximo
-				if (intevalo>maxIntervalo) {
-					maxIntervalo = intevalo;
-				}
-
-				if (intevalo<minInvervalo) {
-					minInvervalo = intevalo;
 				}
 			}
 		}
