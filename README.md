@@ -10,7 +10,7 @@ API RESTful para possibilitar a leitura da lista de indicados e vencedores da ca
   <li>lombok, jpa, opencsv, swagger, junit</li>
 </ul>
 
-<h4>Instruções para arquivo de carga em CSV</h4>
+<h4>Instruções para arquivo de carga em arquivos CSV</h4>
 
 <ul>
   <li>O arquivo está salvo no pacote "src\main\resources" com o nome "movielist.csv"</li>
