@@ -50,7 +50,7 @@ http://localhost:8080/h2
 <h4>Execução dos testes de integração</h4>
 
 <ul>
-	<li>Navegue até o pacote "src\test\resources\java\br.com.filmes\controller"</li>
+	<li>Navegue até o pacote "src\test\java\br.com.filmes\controller"</li>
 	<li>Clique em "Run" na classe <b>"MovieControllerTest.java"</b> </li>
 	<li>Será executado o teste "validaMinMaxIntervalorTest_returnStatusCode200" que possui a finalidade de validar a execução da consulta de vencedores 
     com maior e menor intervalo entre os prêmios de acordo com os requisitos da API</li>
